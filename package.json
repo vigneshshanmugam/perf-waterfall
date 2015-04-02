@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/vigneshshanmugam/perf-waterfall/issues"
   },
-  "homepage": "https://github.com/vigneshshanmugam/perf-waterfall"
+  "homepage": "https://github.com/vigneshshanmugam/perf-waterfall",
+  "devDependencies": {
+    "babel-core": "^4.7.16",
+    "babel-loader": "^4.3.0",
+    "babel-runtime": "^4.7.16",
+    "webpack": "^1.7.3"
+  }
 }

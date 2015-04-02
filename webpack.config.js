@@ -1,6 +1,6 @@
 module.exports = {
 	entry: {
-		app: './waterfall.js'
+		waterfall: './waterfall.js'
 	},
 	output: {
 		path: '.',
