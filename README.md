@@ -1,2 +1,3 @@
 # perf-waterfall
-Standalone waterfall diagrams for a given Page
+
+Create Stand Alone waterfall diagrams and integrate on your workflow/CI. 
