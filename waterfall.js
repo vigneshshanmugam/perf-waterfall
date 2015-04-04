@@ -19,7 +19,7 @@ data : [
 import NavTiming from './plugins/navtimings';
 import ResTiming from './plugins/restimings';
 
-(function(w,d){
+;(function(w,d){
 	var COLORS = {
 		blocked: '#cdcdcd',
 		dns: '#1f7c83',
@@ -42,7 +42,7 @@ import ResTiming from './plugins/restimings';
 	drawWaterfall(entries);
 
 	function drawWaterfall(entries){
-		
+
 	}
 		
 })(window,window.document);
