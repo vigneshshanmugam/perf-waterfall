@@ -1,5 +1,5 @@
 export default function(p,e){
-	var	resources = [];
+	let	resources = [];
 	
 	if(p && p.getEntriesByType) {
 		resources = p.getEntriesByType('resource');

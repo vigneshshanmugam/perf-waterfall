@@ -1,5 +1,5 @@
 export default function(d, p){
-	var	t;
+	let	t;
 	if(p && p.timing) {
 		t = p.timing;
 		return {
