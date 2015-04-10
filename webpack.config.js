@@ -18,4 +18,4 @@ module.exports = {
 	},
 	noInfo: true,
 	colors: true
-}
+};

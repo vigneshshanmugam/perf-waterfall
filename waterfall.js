@@ -46,6 +46,8 @@ import ResTiming from './plugins/restimings';
 	//Resources - Resource Timing
 	entries = ResTiming(p,entries);
 
+	console.log(entries);
+	
 	drawWaterfall(entries);
 
 	function drawWaterfall(){

@@ -85,7 +85,8 @@
 
 		var p = w.performance || w.msPerformance || w.webkitPerformance || w.mozPerformance,
 		    entries = [],
-		    navTiming = NavTiming(d, p);
+		    navTiming = NavTiming(d, p),
+		    maxTime = 0;
 
 		var table = d.createElement("table");
 
@@ -96,12 +97,21 @@
 		//Resources - Resource Timing
 		entries = ResTiming(p, entries);
 
+		console.log(entries);
+
 		drawWaterfall(entries);
 
 		function drawWaterfall() {
+			getMaxTime();
 			createHeaders();
 			createContainer();
 			// d.body.appendChild(table);
+		}
+
+		function getMaxTime() {
+			entries.map(function (obj) {
+				maxTime = Math.max(maxTime, obj.start + obj.duration);
+			});
 		}
 
 		function createHeaders() {
@@ -134,7 +144,25 @@
 			var fragment = d.createDocumentFragment();
 			var div = d.createElement("div");
 			var startTime = obj.start || 0;
+			var timeline = getTimelineMetrics(obj);
+			drawTimeLine();
 		}
+
+		//Interval
+		function getTimelineMetrics(obj) {
+			var dnsEle = d.createElement("span");
+			dnsEle.innerHTML = obj.dnsDuration;
+			var tcpEle = d.createElement("span");
+			tcpEle.innerHTML = obj.tcpDuration;
+			var sslEle = d.createElement("span");
+			sslEle.innerHTML = obj.sslDuration;
+			var respEle = d.createElement("span");
+			respEle.innerHTML = obj.responseDuration;
+			var durationEle = d.createElement("span");
+			durationEle.innerHTML = obj.duration;
+		}
+
+		function drawTimeLine() {}
 	})(window, window.document);
 
 /***/ },
